@@ -19,3 +19,16 @@ or if you have generated a key for the API, you can also do:
 atdcheck --key mykey mytextfile.txt
 ```
 
+# How to Build
+Create source distribution:
+```bash
+python setup.py sdist
+```
+Create binary distribution:
+```bash
+python setup.py bdist_wheel
+```
+Upload to PIP:
+```bash
+twine upload dist/*1.0.x*
+```

@@ -1,7 +1,6 @@
 import ATD
 import argparse
-
-if __name__=="__main__":
+def main(args=None):
 	parser=argparse.ArgumentParser()
 	parser.add_argument('textfile',help='filename of the text you want to check.')
 	parser.add_argument('--key',help='Your unique API Key')
@@ -18,3 +17,6 @@ if __name__=="__main__":
 	for error in errors:
 		print "%s error for: %s **%s**" % (error.type, error.precontext, error.string)
 		print "some suggestions: %s" % (", ".join(error.suggestions),)
+
+if __name__=="__main__":
+	main()

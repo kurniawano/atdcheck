@@ -8,7 +8,7 @@ with open(path.join(here,'README.md'),encoding='utf-8') as f:
 
 setup(
 	name='atdcheck',
-	version='1.0.0',
+	version='1.0.4',
 	description='A Python wrapper for ATD (After The Dateline)',
 	long_description=long_description,
 	url='https://github.com/kurniawano/atdcheck',
@@ -24,5 +24,9 @@ setup(
 	],
 	keywords='tools utilities spell grammar check',
 	packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-	
+	entry_points={
+	'console_scripts':[
+	'atdcheck=atdcheck.__main__:main',
+	],
+	}
 	)
